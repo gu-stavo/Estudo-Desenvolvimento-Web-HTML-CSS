@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            border-collapse: collapse; /*tirar o espaçamento entre as bordas*/
+            /*width: 100%; a tabela vai ocupar a largura da tela do notebook*/
+        }
+        table td, table th{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        table caption {
+            caption-side: top; /*a posiçaõ da legenda*/
+            font-style:italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        tfoot td, thead td, thead th{
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Linha 1, Coluna 1</td>
+            <td>Linha 1, Coluna 2</td>
+            <td>Linha 1, Coluna 3</td>
+            <td>Linha 1, Coluna 4</td>
+        </tr>
+        <tr>
+            <td>Linha 2, Coluna 1</td>
+            <td>Linha 2, Coluna 2</td>
+            <td>Linha 2, Coluna 3</td>
+            <td>Linha 2, Coluna 4</td>
+        </tr>
+        <tr>
+            <td>Linha 3, Coluna 1</td>
+            <td>Linha 3, Coluna 2</td>
+            <td>Linha 3, Coluna 3</td>
+            <td>Linha 3, Coluna 4</td>
+        </tr>
+    </table> <br>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Saídas ({$})</th>
+            <th>Receitas ({$})</th>
+            <th>Lucro ({$})</th>
+        </tr>
+        <tr>
+            <th>Trimestre 1 (Jan-Mar)</th>
+            <td>11200,00</td>
+            <td>21800,00</td>
+            <td><b>10600,00</b></td>
+        </tr>
+        <tr>
+            <th>Trimestre 2 (Abr-Jun)</th>
+            <td>11700,00</td>
+            <td>22500,00</td>
+            <td><b>10800,00</b></td>
+        </tr>
+        <tr>
+            <th>Trimestre 3 (Jul - Set)</th>
+            <td>11650,00</td>
+            <td>22100,00</td>
+            <td><b>10450,00</b></td>
+        </tr>
+        <tr>
+            <th>Trimestre 4 (Out - Dez)</th>
+            <td>11850,00</td>
+            <td>22900,00</td>
+            <td><b>11050,00</b></td>
+        </tr>
+    </table>
+    <br>
+
+    
+
+    <table>
+        <caption>Uma descrição para a tabela</caption>
+        <thead>
+            <tr>
+                <th>Cabeçalho 1</th>
+                <th>Cabeçalho 2</th>
+                <th>Cabeçalho 3</th>
+            </tr> <!-- 1 linha e 3 colunas-->
+        </thead>
+        <tbody>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Ocupa 2 colunas</td> <!--Direção horizontal-->
+                <td>Uma coluna</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" rowspan="2"></td>
+                <td>Total: <br> R$555</td>
+            </tr>
+            <tr>
+            </tr>
+        </tfoot>
+    </table> <br>
+
+    <table>
+        <thead>
+            <tr>
+                <td colspan="4">Este é o cabeçalho da tabela</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">Este é o rodapé da tabela</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Célula 1</td>
+                <td>Célula 2</td>
+                <td>Célula 3</td>
+                <td>Célula 4</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Célula 1</td>
+                <td>Célula 2</td>
+                <td>Célula 3</td>
+                <td>Célula 4</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Célula 1</td>
+                <td>Célula 2</td>
+                <td>Célula 3</td>
+                <td>Célula 4</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Célula 1</td>
+                <td>Célula 2</td>
+                <td>Célula 3</td>
+                <td>Célula 4</td>
+            </tr>
+        </tbody>
+    </table> <br>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>5pm</th>
+            <th>7pm</th>
+            <th>9pm</th>
+            <th>11pm</th>
+        </tr>
+        <tr>
+            <td>Tela um</td>
+            <td>Guerra nas Estrelas</td>
+            <td>O Império Contra-Ataca</td>
+            <td>O Retorno de Jedi</td>
+            <td>O Exorcista</td>
+        </tr>
+        <tr>
+            <td>Tela dois</td>
+            <td colspan="2">Dança com Lobos</td>
+            <td colspan="2">...E o Vento Levou</td>
+        </tr>
+        <tr>
+            <td>Tela três</td>
+            <td colspan="2">2001 - Uma Odisséia no Espaço</td>
+            <td>A Conversa</td>
+            <td>5 Pedaços Fáceis</td>
+        </tr>
+    </table>
+
+</body>
+</html>

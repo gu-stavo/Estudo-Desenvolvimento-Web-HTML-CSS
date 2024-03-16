@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        label{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="formulario.html" method="get" target="_blank" autocomplete="off"> <!--get é padrao-->
+        <p>O meu Formulário</p>
+        <p>
+            <label for="nome">Nome:</label> <!--LABEL é clicavel-->
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+        </p>
+
+        <p>
+            <label>Tipo: CHECKBOX</label> 
+            <input type="checkbox" value="sim" >
+        </p>
+
+        <p>Tipo: RADIO <br>
+            Gênero:<br>
+            <label for="feminino">Feminino</label> 
+            <input type="radio" id="feminino" name="genero" value="feminino"> <br>
+            <label for="masculino">Masculino</label> 
+            <input type="radio" id="masculino" name="genero" value="masculino">
+        </p>
+
+        <p>
+            <label for="date">Tipo: DATA</label> 
+            <input type="date" id="date" name="date">
+        </p>
+
+        <p>
+            <label for="datetime">Tipo: DATA COM HORAS</label> 
+            <input type="datetime-local" id="datetime" name="datetime">
+        </p> <!--Não não aparece o input e no lugar mostra o tipo text é pq o navegador não suporta esse tipo, tem que colocar no lugar datetime-local : vai mostrar a data + as horas -->
+
+        <p>
+            <label for="time">Tipo: HORA</label> 
+            <input type="time" id="time" name="time">
+        </p>
+
+        <p>
+            <label for="cor">Tipo: CORES</label> 
+            <input type="color" id="cor" name="cor" value="#FF0000">
+        </p>
+
+        <p>
+            <label for="email">Tipo: EMAIL</label> 
+            <input type="email" id="email" name="email" placeholder="ex.:email@email.com"><!--Mostra uma validação pedindo para colocar o@ caso não foi colocado-->
+        </p>
+
+        <p>
+            <label for="senha">Tipo: SENHA</label> 
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha"> 
+        </p>
+
+        <p>
+            <label for="file">Tipo: Enviar Arquivo</label> 
+            <input type="file" id="file" name="file" multiple> <!--atributo: accept=".png" diz que tipo de arquivo vai aceitar, se tiver algum diferente naõ vai mostrar na pasta assim naõ vai conseguir enviar. multiple - vai poder selecionar multiplos arquivos.-->
+        </p>
+
+        <p>
+            <label for="number">Tipo: NÚMERO</label> 
+            <input type="number" id="number" name="number" placeholder="Digite um numero" > <!--min="10", max="50" vai ter um minimo e maximo, vai comecar pelo 10 até chegar no 50.   step= diz quanto vai pular, quantos em qantos vai pulando step="5" -->
+        </p>
+
+        <p>
+            <label for="range">Tipo: RANGE - para volume</label> 
+            <input type="range" id="range" name="range" list="values"> <!--min="0", max="10" o volume vai do 0 até 10. posso usar o step.-->
+            <datalist id="values">
+                <option value="0" label="0"></option>
+                <option value="25" label="25"></option>
+                <option value="50" label="50"></option>
+                <option value="75" label="75"></option>
+                <option value="100" label="100"></option>
+              </datalist>
+        </p>
+
+        <p>
+            <label for="url">Tipo: URL - digitar a url</label> 
+            <input type="url" id="url" name="url" placeholder="Digite o site - URL"> <!--Se não digitar certo, msotar uma mensagem de validação, não enviar o form-->
+        </p>
+
+        <p>
+            <label for="search">Tipo: BUSCA</label> 
+            <input type="search" id="search" name="search" placeholder="pesquisar"> 
+        </p>
+
+        <p>
+            <label for="select">Tipo: SELECIONAR OPÇÕES</label> 
+            <select id="select" name="select" multiple>
+                <optgroup label="Grupo 1">
+                    <option value="qualquer">Valor 1</option> <!--Ou posso usar o label="valor" para um valor incial o q a pessoa vai ver inicialmente.-->
+                    <option value="qualquer" label="Valor 2">
+                    <option value="qualquer">Valor 3</option> 
+                    <option value="qualquer" label="Valor 4"> <!--Atributo em uma das option - selected - vai já vim selecionada. disabled: a pessoa não consegue selecionar-->
+                </optgroup>
+
+                <optgroup label="Grupo 2">
+                    <option value="qualquer">Valor 1</option> <!--Ou posso usar o label="valor" para um valor incial o q a pessoa vai ver inicialmente.-->
+                    <option value="qualquer" label="Valor 2">
+                    <option value="qualquer">Valor 3</option> 
+                    <option value="qualquer" label="Valor 4"> <!--Atributo em uma das option - selected - vai já vim selecionada. disabled: a pessoa não consegue selecionar-->
+                </optgroup>
+            </select> <!-- posso colocar o atributo multiple na tag select: selecionar multiplas opções, segurar o ctrl e ir selecionando-->
+        </p>
+
+        <p>
+            <label for="textarea">Tipo: TEXTAREA - area de texto</label> 
+            <textarea name="textarea" id="textarea" rows="3" cols="9"></textarea><!--rows: quantas linhas que eu quero que ela tenha esticado para baixo. cols: quantas colunas que eu quero que tenha esticado para fretne vertical. consigo mudar o tamanho pelo proprio navegador-->
+        </p>
+
+        <p>
+            <button type="reset">Reset</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+</body>
+</html>

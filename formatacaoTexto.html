@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Formatações de Texto</h1>
+    <h2>Texto em Negrito</h2>
+    <p><strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, suscipit quasi. Aliquam nulla sed natus magnam, numquam corporis earum minus similique quod debitis.Totam accusantium possimus fugit inventore exercitationem accusamus!</strong></p>
+
+    <h2>Texto em Itálico</h2>
+    <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum consequuntur molestiae omnis in quis ipsa voluptatibus numquam tenetur maiores, cupiditate incidunt est, sunt obcaecati, quidem perspiciatis! Distinctio nobis reprehenderit quos!</em></p>
+
+    <h2>Texto Marcado - Marca Texto</h2>
+    <p><mark> ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima esse, sed autem ipsum ut rerum cumque maiores non sunt illo molestias? Similique dolores, odit placeat cumque sint ipsam aut!</mark></p>
+    
+    <h2>Texto Pequeno</h2>
+    <p><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, necessitatibus magni. Ducimus corrupti vitae tempora rerum nemo veniam sit harum, id inventore, iure exercitationem ab dignissimos illo cum nulla molestiae.</small></p>
+
+    <h2>Texto Riscado</h2>
+    <p><del>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum doloremque iusto blanditiis eveniet, perferendis nemo tempora, fugiat deserunt velit pariatur possimus amet vero enim saepe aliquid omnis facilis dolor unde.</del></p>
+
+    <h2>Texto Sublinhado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<ins>Praesentium fugit est sed. Vel quasi natus minima eos officiis corrupti et hic est eaque in! Deleniti voluptates dolores explicabo a nostrum!</ins></p>
+
+    <h2>Texto Subscrito</h2>
+    <p>X<sub>2</sub></p>
+    <p>H<sub>2</sub>O</p>
+
+    <h2>Texto Sobrescrito</h2>
+    <p>1<sup>o</sup> Andar</p>
+    <p>TEXTO NORMAL     <sup>Texto Acima</sup>     VOLTEI AO NORMAL</p>
+
+    <h2>Trecho de Código</h2>
+    <p><pre><code>
+        #include &lt;stdio.&gt;
+
+            void main()
+            {
+                float valor, total;
+                int opcao;
+            
+                printf("Informe o valor do produto: ");
+                scanf("%f", &valor);
+                printf("Forma de pagamento \n");
+                printf("1 - a vista \n 2 - a prazo \n");
+                printf("Escolha o pagamento (1 ou 2): ");
+                scanf("%d", &opcao);
+                if (opcao == 1)
+                {
+                    total = valor - (valor * 0.10);
+                    printf("O total a pagar a vista = %.1f \n", total);
+                }
+                else if (opcao == 2)
+                {
+                    printf("O total a pagar a prazo = %.1f \n", valor);
+                }
+                else
+                {
+                    printf("Forma de pagamento invalida");
+                }
+            }
+    </code></pre></p>
+
+    <h2>Citação</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt ipsam, molestias iusto earum illo quisquam <strong><q>Enquanto houver vontade de lutar haverá esperança de vencer</q></strong>voluptas provident! Fuga porro odit minima ea doloribus molestias voluptates soluta voluptate accusantium architecto.</p>
+
+    <h2>Abreviação</h2>
+    <p>Passar o mouse por cima da sigla/abreviação.</p>
+    <p><abbr title="SÃO PAULO">SP</abbr></p>
+    <p><abbr title="RIO DE JANEIRO">RJ</abbr></p>
+    <p><abbr title="AMAPA">AM</abbr></p>
+    <p><abbr title="JAVASCRIPT">JS</abbr></p>
+
+    <h2>Texto Invertido</h2>
+    <p>Esse texto todo está invertido no formato RIGHT-TO-LEFT; ---- O texto de baixo!!!!!</p>
+    <bdo dir="rtl">Esse texto todo está invertido no formato RIGHT-TO-LEFT;</bdo>
+
+    <h1>Linha Horizontal</h1>
+    <hr>
+    <p>Uma linha em cima e uma linha embaixo</p>
+    <hr>
+</body>
+</html>
